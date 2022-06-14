@@ -41,6 +41,7 @@ export const ActionNames = {
 	DAD: "visiting dad",
 	GRANDPARENTS: "visiting grandparents",
 	ELLA: "Taking care of Ella",
+	WORK_STAYING_LATE: "Staying Late at Work",
 };
 
 export const Actions = [
@@ -122,6 +123,16 @@ export const Actions = [
 		effects: {
 			[Effects.PHYSICAL_ENERGY]: Impact.Negative,
 			[Effects.HAPPINESS]: Impact.Negative,
+		},
+	},
+	{
+		name: ActionNames.WORK_STAYING_LATE,
+		effects: {
+			[Effects.PHYSICAL_ENERGY]: Impact.SlightlyNegative,
+			[Effects.MENTAL_ENERGY]: Impact.SlightlyNegative,
+			[Effects.HAPPINESS]: Impact.Negative,
+			[Effects.PASSION]: Impact.Negative,
+			[Effects.RESPONSIBILITY]: Impact.SlightlyNegative,
 		},
 	},
 	{
